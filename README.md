@@ -1,6 +1,6 @@
-<p align="center"><img src="stubs/public/img/lartisan_logo.png" width="400" height="61"></p>
+<p align="center"><img src="stubs/public/img/lartisan_logo.png" width="300" height="45"></p>
 
-# Lartisan Admin Dashboard Preset
+## Lartisan Admin Dashboard Preset
 
 A Laravel 7+ admin preset that scaffolds out a minimum functionality to get one started. The preset is built using Tailwind CSS & Alpine JS and includes:
 
@@ -9,11 +9,11 @@ A Laravel 7+ admin preset that scaffolds out a minimum functionality to get one 
 - [SweetAlert2](https://realrashid.github.io/sweet-alert/) package by Rashid Ali (realrashid)
 - [DropzoneJS](https://www.dropzonejs.com/) for uploading files
 
-## Demo
+### Demo
 
 Here is a demo of the preset in action: https://starter.lartisan.dev
 
-## Installation
+### Installation
 
 I recommend this package on a fresh Laravel instalation to avoid overriding some files. To install the preset, run
 
@@ -35,6 +35,6 @@ npm install && npm run dev
 
 Enjoy!
 
-## License
+### License
 
 The lartisan-preset package is an open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
