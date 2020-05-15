@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+/* TAILWIND SPINNER */
+.spinner {
+  position: absolute;
+}
+
+/* DROPZONE */
+@import "/../../node_modules/dropzone/dist/dropzone.css";
+
+.img-dropzone {
+  border: 1px;
+  border-color: rgba(237, 242, 247, 1);
+  border-radius: 0.25rem;
+  background-color: rgba(237, 242, 247, 1);
+  min-height: 150px;
+}
+
+.dz-message {
+  text-align: center;
+}
+
+.dz-message .dz-button {
+  color: rgba(74, 85, 104, 1);
+  font-weight: inherit;
+  font-size: initial;
+  text-transform: uppercase;
+}

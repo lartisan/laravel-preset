@@ -1,0 +1,37 @@
+{
+  "name": "lartisan/laravel-preset",
+  "type": "preset",
+  "description": "An elegant Admin Panel for Laravel.",
+  "keywords": [
+    "laravel",
+    "laravel preset",
+    "laravel admin panel",
+    "tailwind css",
+    "lartisan"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cristian Iosif",
+      "email": "cristianiosif@me.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Lartisan\\": "src/"
+    }
+  },
+  "require": {
+    "consoletvs/charts": "^6.5",
+    "laravel/ui": "^2.0",
+    "realrashid/sweet-alert": "^3.1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Lartisan\\Providers\\LartisanServiceProvider"
+      ]
+    }
+  }
+}
