@@ -27,7 +27,7 @@ Then apply the scaffolding by running
 php artisan ui lartisan
 ```
 
-And finnaly run
+And finally run
 
 ```
 npm install && npm run dev
