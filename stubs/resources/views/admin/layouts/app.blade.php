@@ -18,6 +18,7 @@
 	
 	<!-- Template Main CSS File -->
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+	<livewire:styles />
 	@stack('styles')
 </head>
 
@@ -37,6 +38,7 @@
 
 	</main> <!-- ./ Main Container -->
 	<script src="{{ asset('js/app.js') }}"></script>
+	<livewire:scripts />
 	@stack('scripts')
 </body>
 </html>

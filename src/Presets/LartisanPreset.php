@@ -2,8 +2,9 @@
 
 namespace Lartisan\Presets;
 
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Arr;
 use Laravel\Ui\Presets\Preset;
+use Illuminate\Support\Facades\File;
 
 class LartisanPreset extends Preset
 {
@@ -11,6 +12,7 @@ class LartisanPreset extends Preset
 	{
 		static::copyCharts();
 		static::updateControllers();
+		static::copyLivewireComponents();
 		static::updateProviders();
 		static::copyPublicAssets();
 		static::copyStorageAssets();
@@ -33,6 +35,11 @@ class LartisanPreset extends Preset
 		copy(__DIR__ . '/../../stubs/app/Http/Controllers/Auth/RegisterController.php', app_path('Http/Controllers/Auth/RegisterController.php'));
 	}
 
+	public static function copyLivewireComponents()
+	{
+		File::copyDirectory(__DIR__ . '/../../stubs/app/Http/Livewire', app_path('Http/Livewire'));
+	}
+
 	public static function updateProviders()
 	{
 		copy(__DIR__ . '/../../stubs/app/Providers/RouteServiceProvider.php', app_path('Providers/RouteServiceProvider.php'));
@@ -52,13 +59,9 @@ class LartisanPreset extends Preset
 
 	public static function updateResources()
 	{
-		File::cleanDirectory(resource_path('js'));
-		File::cleanDirectory(resource_path('views'));
+		File::cleanDirectory(resource_path(''));
 
-		File::copyDirectory(__DIR__ . '/../../stubs/resources/css', resource_path('css'));
-		File::copyDirectory(__DIR__ . '/../../stubs/resources/js', resource_path('js'));
-		File::copyDirectory(__DIR__ . '/../../stubs/resources/views/admin', resource_path('views/admin'));
-		copy(__DIR__ . '/../../stubs/resources/views/welcome.blade.php', resource_path('views/welcome.blade.php'));
+		File::copyDirectory(__DIR__ . '/../../stubs/resources/', resource_path(''));
 	}
 
 	public static function updateRoutes()
@@ -73,14 +76,21 @@ class LartisanPreset extends Preset
 
 	public static function updatePackageArray($packages)
 	{
-		return array_merge([
-			"alpinejs" => "^2.3.3",
-			"chart.js" => "^2.9.3",
-			"dropzone" => "^5.7.0",
-			"tailwindcss" => "^1.3.5",
-			"tailwindcss-plugins" => "^0.3.0",
-			"tailwindcss-spinner" => "^1.0.0"
-		], $packages);
+		return array_merge(
+			[
+				"alpinejs" => "^2.3.3",
+				"chart.js" => "^2.9.3",
+				"dropzone" => "^5.7.0",
+				"tailwindcss" => "^1.3.5",
+				"tailwindcss-plugins" => "^0.3.0",
+				"tailwindcss-spinner" => "^1.0.0"
+			],
+			Arr::except($packages, [
+				'lodash',
+				'popper',
+				'vue-template-compiler'
+			])
+		);
 	}
 
 	protected static function updateWebpackConfiguration()

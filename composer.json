@@ -1,13 +1,14 @@
 {
   "name": "lartisan/laravel-preset",
   "type": "preset",
-  "description": "An elegant Admin Panel for Laravel.",
+  "description": "A TALL Admin Panel for Laravel.",
   "keywords": [
-    "laravel",
     "laravel preset",
     "laravel admin panel",
     "tailwind css",
-    "lartisan"
+    "alpine js",
+    "laravel",
+    "livewire"
   ],
   "license": "MIT",
   "authors": [
@@ -25,6 +26,7 @@
   "require": {
     "consoletvs/charts": "^6.5",
     "laravel/ui": "^2.0",
+    "livewire/livewire": "^1.1",
     "realrashid/sweet-alert": "^3.1"
   },
   "extra": {

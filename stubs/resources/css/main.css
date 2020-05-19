@@ -10,7 +10,7 @@
 }
 
 /* DROPZONE */
-@import "/../../node_modules/dropzone/dist/dropzone.css";
+@import "~dropzone/dist/dropzone.css";
 
 .img-dropzone {
   border: 1px;
