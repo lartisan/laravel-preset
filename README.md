@@ -1,8 +1,15 @@
 <p align="center"><img src="stubs/public/img/lartisan_logo.png" width="300" height="45"></p>
+<hr>
+<p align="center">
+<a href="https://packagist.org/packages/lartisan/laravel-preset"><img src="https://poser.pugx.org/lartisan/laravel-preset/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/lartisan/laravel-preset"><img src="https://poser.pugx.org/lartisan/laravel-preset/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lartisan/laravel-preset"><img src="https://poser.pugx.org/lartisan/laravel-preset/license.svg" alt="License"></a>
+</p>
+<hr>
 
-## Lartisan Admin Dashboard Preset
+## A TALL Admin Dashboard Preset for Laravel 7+
 
-A Laravel 7+ admin preset that scaffolds out a minimum functionality to get one started. The preset is built using Tailwind CSS & Alpine JS and includes:
+A Laravel 7+ admin preset that scaffolds out a minimum functionality to get one started. On top of Laravel, this preset is built using Tailwind CSS, Alpine JS and Livewire and includes:
 
 - [Laravel UI](https://github.com/laravel/ui) for generating the auth
 - [Laravel Charts](https://charts.erik.cat/) with ChartJS presets
