@@ -22,7 +22,8 @@ Here is a demo of the preset in action: https://starter.lartisan.dev
 
 ### Installation
 
-I recommend this package on a fresh Laravel instalation to avoid overriding some files. To install the preset, run
+I recommend this package on a fresh Laravel instalation to avoid overriding some files. Here is the [file structure](#file-structure) of the stubs.
+To install the preset, run
 
 ```
 composer require lartisan/laravel-preset
@@ -41,6 +42,83 @@ npm install && npm run dev
 ```
 
 Enjoy!
+
+### File Structure
+
+```
+|── src
+|   |── Presets
+|	|	└── LartisanPreset.php
+|	└── Providers
+|		└── LartisanServiceProvider.php
+|── stubs
+|	|── app
+|	|	|── Charts
+|	|	|	|── LatestUsers.php
+|	|	|	└── MonthlyViews.php
+|	|	|── Http
+|	|	|	|── Controllers
+|	|	|	|	|── Admin
+|	|	|	|	|	|── DashboardController.php
+|	|	|	|	|	└── PageController.php
+|	|	|	|	└── Auth
+|	|	|	|		|── LoginController.php
+|	|	|	|		└── RegisterController.php
+|	|	|	└── Livewire
+|	|	|		|── LoginForm.php
+|	|	|		└── RegisterForm.php
+|	|	└── Providers
+|	|		└── RouteServiceProvider.php
+|	|── public
+|	|	└── img
+|	|		|── apple-touch-icon.png
+|	|		|── favicon.png
+|	|		└── lartisan_logo.png
+|	|── resources
+|	|	|── css
+|	|	|	└── main.css
+|	|	|── js
+|	|	|	|── app.js
+|	|	|	└── bootstrap.js
+|	|	|── lang
+|	|	|	└── en
+|	|	|── sass
+|	|	|	└── app.scss
+|	|	└── views
+|	|		|── admin
+|	|		|	└── layouts
+|	|		|	|	|── partials
+|	|		|	|	|	|── _datepicker.blade.php
+|	|		|	|	|	|── footer.blade.php
+|	|		|	|	|	|── header.blade.php
+|	|		|	|	|	└── sidebar.blade.php
+|	|		|	|	└── app.blade.php
+|	|		|	|── entypo-icons.blade.php
+|	|		|	|── forms-icons.blade.php
+|	|		|	|── heroicons-icons.blade.php
+|	|		|	|── home-icons.blade.php
+|	|		|	|── profile-icons.blade.php
+|	|		|	|── tables-icons.blade.php
+|	|		|	└── zondicons-icons.blade.php
+|	|		|── auth
+|	|		|	|── login.blade.php
+|	|		|	└── register.blade.php
+|	|		|── livewire
+|	|		|	|── login-form.blade.php
+|	|		|	└── register-form.blade.php
+|	|		└── welcome.blade.php
+|	|── routes
+|	|	└── admin.php
+|	|── storage
+|	|	|── entypo+
+|	|	|── heroicons
+|	|	└── zondicons
+|	|── tailwind.config.js
+|	└── webpack.mix.js
+|── composer.json
+|── LICENSE.md
+└── README.md
+```
 
 ### License
 
